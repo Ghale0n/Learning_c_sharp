@@ -4,3 +4,15 @@
 // a = -9 b = -3 -> max = -3
 
 Console.Clear();
+Console.WriteLine("Привет! Введи первое число: ");
+int x = int.Parse(Console.ReadLine()!);
+Console.WriteLine("А теперь второе число: ");
+int y = int.Parse(Console.ReadLine()!);
+if(x>y)
+{
+     Console.Write($"{x} больше!");
+}
+else
+{
+    Console.Write($"{y} больше!");
+}
