@@ -8,9 +8,9 @@ Console.WriteLine("Привет! Введи первое число: ");
 int x = int.Parse(Console.ReadLine()!);
 Console.WriteLine("А теперь второе число: ");
 int y = int.Parse(Console.ReadLine()!);
-if(x>y)
+if (x > y)
 {
-     Console.Write($"{x} больше!");
+    Console.Write($"{x} больше!");
 }
 else
 {

@@ -10,13 +10,9 @@ int z = int.Parse(Console.ReadLine()!);
 
 // Console.WriteLine($"в сумме это будет: {x + y + z}"); (Лирическое отступление)
 
-if (x > y)
+if (x > y && x > z)
 {
-    if (x > z)
-    {
-        Console.WriteLine($"Самое большое число - {x}");
-    }
-
+  Console.WriteLine($"Самое большое число - {x}");
 }
 else
 {

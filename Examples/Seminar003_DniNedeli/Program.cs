@@ -17,18 +17,18 @@ else if (x == 3)
     Console.Write("Это среда!");
 }
 else if (x == 4)
-    {
-        Console.Write("Это четвег!");
-    }
+{
+    Console.Write("Это четвег!");
+}
 else if (x == 5)
-    {
-        Console.Write("Это пятница!");
-    }
+{
+    Console.Write("Это пятница!");
+}
 else if (x == 6)
-    {
-        Console.Write("Это суббота!");
-    }
+{
+    Console.Write("Это суббота!");
+}
 else if (x == 7)
-    {
-        Console.Write("Это воскресенье!");
-    }
+{
+    Console.Write("Это воскресенье!");
+}
