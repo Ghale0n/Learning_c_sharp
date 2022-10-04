@@ -11,4 +11,4 @@ if(max <a2)
 {
     max = a2;
 }
-Console.WriteLine($max);
+Console.WriteLine("max");
