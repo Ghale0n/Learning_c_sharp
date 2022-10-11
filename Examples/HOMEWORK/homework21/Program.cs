@@ -5,7 +5,7 @@
 // A (7,-5, 0); B (1,-1,9) -> 11.53
 
 double Dist(int x1, int x2, int y1, int y2, int z1, int z2)
-//              ax      ay      bx      by      az      bz
+//              ax      bx      ay      by      az      bz
 {
     double result;
     result = Math.Sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1) + (z2 - z1) * (z2 - z1));
@@ -32,4 +32,4 @@ int by = int.Parse(Console.ReadLine()!);
 Console.Write("Введите Z координаты B: ");
 int bz = int.Parse(Console.ReadLine()!);
 
-Console.WriteLine($"Длина отрезка AB: {Dist(ax, ay, bx, by, az, bz):f2} "); //f2 - сокращет значение до второй цифры после запятой
+Console.WriteLine($"Длина отрезка AB: {Dist(ax, bx, ay, by, az, bz):f2} "); //f2 - сокращет значение до второй цифры после запятой
