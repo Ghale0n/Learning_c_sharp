@@ -3,51 +3,59 @@
 // массива.
 // [3 7 22 2 78] -> 76
 
-int[] getArray(int size, int minValue, int maxValue) // функция задаёт массив со случайными числами 
+double[] getArray(int size, int minValue, int maxValue) // функция задаёт массив вещественных чисел благодаря double
 {
-    int[] res = new int[size];
+    double[] res = new double[size];
 
     for (int i = 0; i < size; i++)
     {
-        res[i] = new Random().Next(minValue, maxValue + 1);
+        res[i] = new Random().NextDouble() * (maxValue - minValue) + minValue;
     }
     return res;
 }
 
-int[] minMass(int[] array)
+double maxMass(double[] array)
 {
-    
-    int min = 0;
-    for (int i = 0; i < array.Length; i++)
+    double max = array[0];
+    for (int i = 1; i < array.Length; i++)
     {
-        if
+        if (array[i] > max)
         {
+            max = array[i];
+        }
 
+    }
+    return max;
+}
+
+
+double minMass(double[] array)
+{
+    double min = array[0];
+    for (int i = 1; i < array.Length; i++)
+    {
+        if (array[i] < min)
+        {
+            min = array[i];
         }
     }
+    return min;
 
-    Console.Write(diff);
-    
-    // int min = maxValue;
-    // for (int i = 0; i < array.Length; i++)
-    // {
-    //     if(array[i] > max)
-    //     {
-    //         array[i] = max;
-    //     }
-    //     if (array[i] < min)
-    // }
 }
-
 Console.Clear();
 
-int[] array = getArray(5, -100, 100);
-Console.WriteLine(String.Join(", ", array));
+double[] newarr= getArray(5, -100, 100);
+Console.WriteLine(String.Join(", ", newarr));
 
-int diff = 0;
+// int diff = 0; //попытка решить через сравнение
 
-foreach (int el in array)
-{
-    diff = int[]
-}
+// foreach (int el in array)
+// {
+//     diff = int[]
+// }
+
+double Min = minMass(newarr);
+double Max = maxMass(newarr);
+
+Console.WriteLine($"Разница между максимальным и минимальным элементом массива: {Max - Min}");
 
