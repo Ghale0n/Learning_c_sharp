@@ -12,7 +12,7 @@ int[] getArray(int size, int minValue, int maxValue) // функция зада�
 
     for (int i = 0; i < size; i++)
     {
-        res[i] = new Random().Next(minValue, maxValue + 1);
+        res[i] = new Random().Next(minValue, maxValue + 1); // + 1 для создания правильного полуинтервала
     }
     return res;
 }

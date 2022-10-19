@@ -17,7 +17,7 @@ void PrintArr(int[] mass)
     for (int i = 0; i < mass.Length; i++)
     {
         Console.Write($"{mass[i]}");
-        if (i != mass.Length - 1) ;
+        if (i != mass.Length - 1) 
         {
             Console.Write(", ");
         }
