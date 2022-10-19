@@ -16,16 +16,24 @@ int[] getArray(int size, int minValue, int maxValue) // функция зада�
     return res;
 }
 
+int SummOfEverySecondIndex(int[] arr)
+{
+    int summ = 0;
+    for (int i = 1; i < arr.Length; i += 2)
+    {
+        summ += arr[i];
+    }
+    return summ;
+    
+}
+
+
 Console.Clear();
 
 int[] arr = getArray(10, -100, 100);
 
 Console.WriteLine(String.Join(" ", arr));
 
-int summ = 0;
-for (int i = 1; i < arr.Length; i+=2)
-{
-    summ += arr[i];  
-}
+int result = SummOfEverySecondIndex(arr);
 
-Console.WriteLine($"{arr}");
+Console.WriteLine($"Сумма элементов на нечетных поциях: {result}");
