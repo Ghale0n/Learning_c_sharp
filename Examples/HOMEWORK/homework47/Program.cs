@@ -5,6 +5,8 @@
 // 1 -3,3 8 -9,9
 // 8 7,8 -7,1 9
 
+// new Random().NextDouble() * (b - a) + a; - удобная формула задачи массива
+
 
 double[,] Get2ArrayDouble(int m, int n, double maxValue, double minValue)
 {

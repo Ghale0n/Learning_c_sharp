@@ -1,6 +1,6 @@
-﻿// Задайте двумерный массив. Найдите элементы, у
-// которых оба индекса чётные, и замените эти элементы на их
-// квадраты.
+﻿// Задайте двумерный массив. Напишите программу,
+// которая поменяет местами первую и последнюю строку
+// массива.
 
 int[,] Get2Array(int m, int n, int minValue, int maxValue)
 {
@@ -15,31 +15,28 @@ int[,] Get2Array(int m, int n, int minValue, int maxValue)
     return result;
 }
 
+
 void Print2Array(int[,] inArray)
+
 {
     for (int i = 0; i < inArray.GetLength(0); i++)
     {
         for (int j = 0; j < inArray.GetLength(1); j++)
         {
-            
             Console.Write($"{inArray[i, j]}\t ");
         }
         Console.WriteLine();
     }
 }
 
-void ChetniyElSquare(int[,] inArray)
+void ChangeFirstLast (int[,] inArray)
 {
-    for (int i = 0; i < inArray.GetLength(0); i+=2)
+    int temp = 0;
+    for (int i = 0; i < inArray.GetLength(0); i++)
     {
-        for (int j = 0; j < inArray.GetLength(1); j+=2)
-        {
-            if (i % 2 == 0 && j % 2 == 0)
-            {
-                inArray[i, j] = inArray[i, j] * inArray[i, j]; //или inArray[i,j] *= inArray[i,j];
-            }
-        }
-        Console.WriteLine();
+        temp = inArray[0, i] ;
+        inArray[0,i] = inArray[inArray.GetLength(1)-1 , i];
+        inArray[inArray.GetLength(1)-1 , i] = temp;
     }
 }
 
@@ -50,5 +47,6 @@ int columns = int.Parse(Console.ReadLine()!);
 
 int[,] array = Get2Array(row, columns,0, 20);
 Print2Array(array);
-ChetniyElSquare(array);
+ChangeFirstLast(array);
+Console.WriteLine();
 Print2Array(array);
