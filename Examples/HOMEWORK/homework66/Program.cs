@@ -17,7 +17,7 @@ int GetSummBetween(int n, int m)
 Console.Clear();
 Console.WriteLine("Введите первое число: ");
 int n = int.Parse(Console.ReadLine()!);
-Console.WriteLine("Введите первое число: ");
+Console.WriteLine("Введите второе число: ");
 int m = int.Parse(Console.ReadLine()!);
 
 Console.WriteLine($"Сумма натуральных элементов в промежутке двух введенных чисел: {GetSummBetween(n, m)}");
